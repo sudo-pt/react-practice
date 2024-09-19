@@ -1,5 +1,5 @@
 import './App.css';
-import UserList from "./component/UserList";
+import UserTable from "./component/UserTable";
 
 function App() {
     const data = [
@@ -44,7 +44,7 @@ function App() {
         <>
             <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet"/>
             <div className="App">
-                <UserList dataSource={data}/>
+                <UserTable dataSource={data}/>
             </div>
         </>
     );

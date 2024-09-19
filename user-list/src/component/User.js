@@ -1,6 +1,6 @@
 export default function User(props) {
     const userRecord = props.userRecord;
-    console.log('user record', userRecord);
+    // console.log('user record', userRecord);
     return (
         <div className="flex">
             <div className="mr-4 flex-shrink-0 self-center">

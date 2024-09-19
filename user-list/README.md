@@ -1,6 +1,39 @@
-# Getting Started with Create React App
+# Simple User List
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## User Table
+As a component, the User Table is designed as a `component` named `UserTable`, located in `component/UserTable.js`
+
+`UserTable` accept `dataSource` as it's displayed data on the table. The accepted data format is like:
+
+```js
+const dataSource = [{
+    key: '1',
+    name: 'John Brown',
+    age: 32,
+    email: 'Person1@test.com',
+    address: '123 Main St, Springfield',
+}];
+```
+
+## User Details Modal
+When we click on element on `UserTable`, a UserDetail Modal will pop up on the website.
+The user's detail information is also designed as a `component` named `User`, located in `component/User.js`
+
+`User` accept `userRecord` as it's displayed data. The accepted data format is like:
+```js
+const userRecord = {
+    key: '1',
+    name: 'John Brown',
+    age: 32,
+    email: 'Person1@test.com',
+    address: '123 Main St, Springfield',
+};
+```
+
+## Mock Data
+We created 5 mock data in `App.js`. It will be displayed when start the project.
 
 ## Available Scripts
 
