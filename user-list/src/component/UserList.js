@@ -8,7 +8,7 @@ const columns = [
         showSorterTooltip: {
             target: 'full-header',
         },
-        sorter: (a, b) => a.name.length - b.name.length,
+        sorter: (a, b) => a.name.localeCompare(b.name)
     },
     {
         title: 'Age',
@@ -19,40 +19,15 @@ const columns = [
         dataIndex: 'email',
     },
 ];
-const data = [
-    {
-        key: '1',
-        name: 'John Brown',
-        age: 32,
-        email: 'Person1@test.com',
-    },
-    {
-        key: '2',
-        name: 'Jim Green',
-        age: 42,
-        email: 'Person2@test.com',
-    },
-    {
-        key: '3',
-        name: 'Joe Black',
-        age: 32,
-        email: 'Person3@test.com',
-    },
-    {
-        key: '4',
-        name: 'Jim Red',
-        age: 32,
-        email: 'Person4@test.com',
-    },
-];
 
-const UserList = () => {
+const UserList = (props) => {
     const [userRecord, setUserRecord] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const clickRow = async (record) => {
         setUserRecord(record);
         setIsModalOpen(true);
     }
+    const data = props.dataSource;
     return <>
         <Table
             columns={columns}
